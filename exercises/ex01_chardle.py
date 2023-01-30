@@ -1,22 +1,22 @@
-"""EX01 - Chardle - A Cute Step Towards Wordle."""
-__author__ = 730563367
+"""EX01 - Chardle - A Step Towards Wordle."""
 
-Characters_count: int = 0
+__author__ = "730563367"
 
-word: str = input("Enter a 5 letter word ")
+word: str = input("Enter a 5-character word: ")
 if len(word) != 5:
-    print("Error: word must have 5 characters")
+    print("Error: Word must contain 5 characters")
     exit()
 
-character_guess: str = input("Enter one character. ")
+character_guess: str = input("Enter a single character: ")
 if len(character_guess) != 1:
-    print("Error, enter one character. ")
+    print("Error: Character must be a single character.")
     exit()
-else: len(character_guess) == 1
+else: 
+    len(character_guess) == 1
 
-print("Search for " + character_guess + " in " + word)
+print("Searching for " + character_guess + " in " + word)
 
-count: int = 0 
+count: int = 0  
 
 if word[0] == character_guess:
     print(character_guess + " found at index " + "0")
@@ -55,6 +55,3 @@ if count == 4:
 
 if count == 5: 
     print("5 instances of " + character_guess + " found in " + word)
-
-# Could I typecast on the 2 above if statements?
-# Ex. print(str(count)+ "instances of " .....)
